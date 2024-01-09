@@ -10,6 +10,7 @@ public class BaseClass {
     @Test
     public void setUp()
     {
+        System.setProperty("webdriver.chrome.driver","C:/Users/01/Downloads/chromedriver.exe");
         webDriver = new ChromeDriver();
         webDriver.navigate().to("http://aplombsoft.com/");
         webDriver.manage().window().maximize();
