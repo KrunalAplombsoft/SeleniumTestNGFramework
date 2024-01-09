@@ -13,5 +13,6 @@ public class BaseClass {
         webDriver = new ChromeDriver();
         webDriver.navigate().to("http://aplombsoft.com/");
         webDriver.manage().window().maximize();
+        System.out.println("Chrome Browser Start Successfully");
     }
 }
