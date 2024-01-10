@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Selenium Demo Project">
     <test name="Selenium Demo Project">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
         <classes>
             <class name="TestCases.Login_Feature"/>
         </classes>
