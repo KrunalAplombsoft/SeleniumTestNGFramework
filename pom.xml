@@ -24,6 +24,8 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>Smoke.xml</suiteXmlFile>
+                        <suiteXmlFile>Sanity.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
