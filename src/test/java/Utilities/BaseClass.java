@@ -38,7 +38,8 @@ public class BaseClass {
         {
             System.out.println("You have selected wrong web driver please check again!!");
         }
-        webDriver.navigate().to("https://automationexercise.com/");
+//        webDriver.navigate().to("https://automationexercise.com/");
+        webDriver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
