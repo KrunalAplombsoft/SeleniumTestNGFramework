@@ -4,12 +4,15 @@ pipeline{
 	tools{
 		maven "MAVEN_HOME"
 	}
+	parameters {
+      string "filename"
+    }
 	stages{
 	    stage('Installing Maven Tool')
 		{
 		    steps
 			{
-				echo 'Maven tool Installed successfully'
+				echo "Maven tool Installed successfully"
 			}
 		}
 		stage('Fetch Code From GitHub')
@@ -23,7 +26,7 @@ pipeline{
 		{
 		    steps
 			{
-				bat 'mvn clean install -DsuiteFile=${XMLFileName}.xml'
+				bat "mvn clean install -Dsuite=${filename}.xml"
 			}
 		}
 	}
