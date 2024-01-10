@@ -26,7 +26,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suitFile}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
             <plugin>
