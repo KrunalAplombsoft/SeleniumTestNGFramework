@@ -3,7 +3,7 @@
 <suite name="Selenium Demo Project">
     <test name="Selenium Demo Project">
         <classes>
-            <class name="Utilities.BaseClass"/>
+            <class name="TestCases.Login_Feature"/>
         </classes>
     </test>
 </suite>
