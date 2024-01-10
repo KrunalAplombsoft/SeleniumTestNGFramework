@@ -1,11 +1,29 @@
 pipeline{
 	agent any	
+
+	tools{
+		maven "MAVEN_HOME"
+	}
 	stages{
-		stage('Build')
+	    stage('Installing Maven Tool')
 		{
 		    steps
 			{
-				bat 'mvn clean test'
+				echo 'Maven tool Installed successfully'
+			}
+		}
+		stage('Fetch Code From GitHub')
+		{
+		    steps
+			{
+				git credentialsId: '3f6b82cc-8818-4739-aede-6cb12b08144c', url: 'https://github.com/KrunalAplombsoft/SeleniumTestNGFramework.git'
+			}
+		}
+		stage('Execute TestNG TestCases')
+		{
+		    steps
+			{
+				bat 'mvn clean test -Dsuite=testng.xml'
 			}
 		}
 	}
