@@ -23,7 +23,7 @@ pipeline{
 		{
 		    steps
 			{
-				bat 'mvn clean test -Dsuite=${XMLFileName}.xml'
+				bat 'mvn clean install -DsuiteFile=${XMLFileName}.xml'
 			}
 		}
 	}
