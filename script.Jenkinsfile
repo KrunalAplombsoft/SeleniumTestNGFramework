@@ -23,7 +23,7 @@ pipeline{
 		{
 		    steps
 			{
-				bat 'mvn clean test -Dsuite=testng.xml'
+				bat 'mvn clean test -Dsuite=${XMLFileName}.xml'
 			}
 		}
 	}
