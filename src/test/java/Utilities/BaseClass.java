@@ -4,9 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -18,7 +16,7 @@ public class BaseClass {
 
     public static WebDriver webDriver;
 
-    @BeforeMethod
+    @BeforeTest
     public void first() throws IOException
     {
         FileInputStream fileInputStream = new FileInputStream("./config.properties");
@@ -44,7 +42,7 @@ public class BaseClass {
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown()
     {
         webDriver.close();
