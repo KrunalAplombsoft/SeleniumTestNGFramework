@@ -4,7 +4,7 @@
     <test name="Selenium Demo Project">
         <groups>
             <run>
-                <include name="Web Sanity"/>
+                <include name="WebSanity"/>
                 <include name="IncorrectEmail"/>
             </run>
         </groups>
