@@ -1,4 +1,4 @@
-package WebAppFunctions;
+package WebTestSteps;
 
 import PageObjects.Login_User_PO;
 import org.openqa.selenium.WebDriver;
