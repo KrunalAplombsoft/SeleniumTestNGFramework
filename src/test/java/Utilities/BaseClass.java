@@ -16,7 +16,7 @@ public class BaseClass {
 
     public static WebDriver webDriver;
 
-    @BeforeTest(groups = {"Smoke","Sanity","Web"})
+    @BeforeTest(groups = {"Web"})
     public void first() throws IOException
     {
         FileInputStream fileInputStream = new FileInputStream("./config.properties");
