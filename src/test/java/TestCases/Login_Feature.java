@@ -18,5 +18,4 @@ public class Login_Feature extends BaseClass {
     {
         System.out.println("Sanity Test");
     }
-
 }
