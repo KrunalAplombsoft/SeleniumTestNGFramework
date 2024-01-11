@@ -1,4 +1,4 @@
-package TestCases;
+package Web_TestCases;
 
 import Utilities.BaseClass;
 
