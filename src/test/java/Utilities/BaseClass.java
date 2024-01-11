@@ -1,5 +1,6 @@
 package Utilities;
 
+import org.apache.http.client.ClientProtocolException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
 
+    String URL;
+    public static Properties prop;
     public static WebDriver webDriver;
 
     @BeforeTest(groups = {"WebSmoke","WebSanity"})
@@ -42,7 +45,25 @@ public class BaseClass {
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterTest
+    @BeforeMethod(groups = {"ApiSmoke"})
+    public void setup()
+    {
+        try
+        {
+            prop = new Properties();
+            FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "./config.properties");
+            FileInputStream ip1 = new FileInputStream(System.getProperty("user.dir") + "./DataStore.properties");
+            prop.load(ip);
+            prop.load(ip1);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        URL = prop.getProperty("URL");
+    }
+
+    @AfterTest(groups = {"WebSmoke","WebSanity"})
     public void tearDown()
     {
         webDriver.close();
