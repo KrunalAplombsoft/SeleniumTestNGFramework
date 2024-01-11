@@ -1,10 +1,10 @@
 package Web_TestCases;
 
-import Utilities.BaseClass;
+import Utilities.WebBaseClass;
 
 import org.testng.annotations.Test;
 
-public class Login_Feature extends BaseClass {
+public class Login_Feature extends WebBaseClass {
 
     @Test(groups = {"WebSmoke","CorrectEmail"})
     public void Login_User_With_Correct_Email_And_Password()

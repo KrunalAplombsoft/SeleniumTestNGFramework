@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Selenium Demo Project">
+    <test name="API Selenium Demo Project">
+        <groups>
+            <run>
+                <include name="ApiSmoke"/>
+                <include name="GetUserData"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Api_TestCases.Get_Demo"/>
+        </classes>
+    </test>
+</suite>
