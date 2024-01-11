@@ -13,7 +13,7 @@ public class Login_Feature extends BaseClass {
         System.out.println("Smoke Test");
     }
 
-    @Test(groups = {"Sanity"})
+    @Test(groups = {"Sanity","IncorrectEmail"})
     public void Login_User_With_Incorrect_Email_And_Password()
     {
         System.out.println("Sanity Test");

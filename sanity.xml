@@ -5,6 +5,7 @@
         <groups>
             <run>
                 <include name="Sanity"/>
+                <include name="IncorrectEmail"/>
             </run>
         </groups>
         <classes>
