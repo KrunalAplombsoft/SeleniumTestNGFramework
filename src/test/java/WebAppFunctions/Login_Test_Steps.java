@@ -1,6 +1,6 @@
 package WebAppFunctions;
 
-import PageObjects.Login_User_With_Correct_Email_And_Password_PO;
+import PageObjects.Login_User_PO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,20 +17,20 @@ public class Login_Test_Steps {
     }
 
     public WebDriverWait wait;
-    public Login_User_With_Correct_Email_And_Password_PO correctEmailAndPasswordPo;
+    public Login_User_PO correctEmailAndPasswordPo;
 
     public void openLoginPage()
     {
-        correctEmailAndPasswordPo = new Login_User_With_Correct_Email_And_Password_PO(driver);
+        correctEmailAndPasswordPo = new Login_User_PO(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        correctEmailAndPasswordPo.OpenLogin.click();
+        correctEmailAndPasswordPo.OpenLoginSignUp.click();
         wait.until(ExpectedConditions.visibilityOf(correctEmailAndPasswordPo.VerifyLoginPage));
         Assert.assertTrue(correctEmailAndPasswordPo.VerifyLoginPage.isDisplayed());
     }
 
     public void enterLoginCredentials()
     {
-        correctEmailAndPasswordPo = new Login_User_With_Correct_Email_And_Password_PO(driver);
+        correctEmailAndPasswordPo = new Login_User_PO(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         correctEmailAndPasswordPo.EnterEmail.sendKeys("krunal@yopmail.com");
         correctEmailAndPasswordPo.EnterPassword.sendKeys("Krunal@123");
@@ -39,7 +39,7 @@ public class Login_Test_Steps {
 
     public void verifyAfterLoginUser()
     {
-        correctEmailAndPasswordPo = new Login_User_With_Correct_Email_And_Password_PO(driver);
+        correctEmailAndPasswordPo = new Login_User_PO(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(correctEmailAndPasswordPo.DeleteAccountButton));
         Assert.assertEquals(correctEmailAndPasswordPo.VerifyUserName.getText(),"Krunal");
@@ -47,7 +47,7 @@ public class Login_Test_Steps {
 
     public void deleteAccount()
     {
-        correctEmailAndPasswordPo = new Login_User_With_Correct_Email_And_Password_PO(driver);
+        correctEmailAndPasswordPo = new Login_User_PO(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         correctEmailAndPasswordPo.DeleteAccountButton.click();
         Assert.assertTrue(correctEmailAndPasswordPo.VerifyAccountDeletedPage.isDisplayed());

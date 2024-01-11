@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login_User_With_Correct_Email_And_Password_PO {
+public class Login_User_PO {
 
     WebDriver webDriver;
 
-    public Login_User_With_Correct_Email_And_Password_PO(WebDriver webDriver)
+    public Login_User_PO(WebDriver webDriver)
     {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver,this);
@@ -19,7 +19,7 @@ public class Login_User_With_Correct_Email_And_Password_PO {
     public WebElement VerifyHome;
 
     @FindBy(xpath = "//a[contains(text(),' Signup / Login')]")
-    public WebElement OpenLogin;
+    public WebElement OpenLoginSignUp;
 
     @FindBy(xpath = "//h2[contains(text(),'Login to your account')]")
     public WebElement VerifyLoginPage;
@@ -41,4 +41,10 @@ public class Login_User_With_Correct_Email_And_Password_PO {
 
     @FindBy(xpath = "//b[contains(text(),'Account Deleted!')]")
     public WebElement VerifyAccountDeletedPage;
+
+    @FindBy(xpath = "//a[contains(text(),' Logout')]")
+    public WebElement LogoutButton;
+
+    @FindBy(xpath = "//p[contains(text(),'Your email or password is incorrect!')]")
+    public WebElement VerifyValidationMessage;
 }

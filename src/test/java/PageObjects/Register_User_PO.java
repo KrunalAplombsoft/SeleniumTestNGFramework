@@ -15,12 +15,6 @@ public class Register_User_PO {
         PageFactory.initElements(webDriver,this);
     }
 
-    @FindBy(xpath = "//a[contains(text(),'Home')]")
-    public WebElement VerifyHome;
-
-    @FindBy(xpath = "//a[contains(text(),' Signup / Login')]")
-    public WebElement OpenSignUp;
-
     @FindBy(xpath = "//h2[contains(text(),'New User Signup!')]")
     public WebElement VerifySignupPage;
 
