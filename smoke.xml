@@ -5,6 +5,7 @@
         <groups>
             <run>
                 <include name="Smoke"/>
+                <include name="CorrectEmail"/>
             </run>
         </groups>
         <classes>

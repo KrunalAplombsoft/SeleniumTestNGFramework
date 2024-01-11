@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Login_Feature extends BaseClass {
 
-    @Test(groups = {"Smoke"})
+    @Test(groups = {"Smoke","CorrectEmail"})
     public void Login_User_With_Correct_Email_And_Password()
     {
         System.out.println("Smoke Test");
