@@ -40,7 +40,7 @@ public class WebBaseClass {
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterTest(groups = {"WebSmoke","WebSanity"})
+    @AfterTest(groups = {"Web","Smoke","Sanity"})
     public void tearDown()
     {
         webDriver.close();

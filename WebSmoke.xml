@@ -9,6 +9,9 @@
                 <exclude name="Sanity"/>
             </run>
         </groups>
+<!--        <packages>-->
+<!--            <package name="Web.Web_TestCases"/>-->
+<!--        </packages>-->
         <classes>
             <class name="Web.Web_TestCases.Login_Feature"/>
         </classes>
