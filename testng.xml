@@ -2,8 +2,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Selenium Demo Project">
     <test name="Selenium Demo Project">
-        <classes>
-            <class name="Web_TestCases.Login_Feature"/>
-        </classes>
     </test>
 </suite>
