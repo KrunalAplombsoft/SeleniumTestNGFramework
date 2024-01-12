@@ -11,7 +11,7 @@ import java.util.Properties;
 
 public class Get_Demo extends ApiBaseClass {
 
-    @Test(groups = {"ApiSmoke","GetUserData"})
+    @Test(groups = {"Api","Smoke"})
     public void GETUserData()
     {
         //Response object

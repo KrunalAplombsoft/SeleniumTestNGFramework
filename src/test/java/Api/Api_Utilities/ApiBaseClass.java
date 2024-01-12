@@ -12,7 +12,7 @@ public class ApiBaseClass {
 
     String URL;
     public static Properties prop;
-    @BeforeMethod(groups = {"ApiSmoke"})
+    @BeforeMethod(groups = {"Api","Smoke"})
     public void setup()
     {
         try
