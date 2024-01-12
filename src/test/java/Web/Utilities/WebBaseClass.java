@@ -14,7 +14,7 @@ public class WebBaseClass {
 
     public static WebDriver webDriver;
 
-    @BeforeTest(groups = {"Web","Smoke","Sanity"})
+    @BeforeMethod(groups = {"Web","Smoke","Sanity"})
     public void first() throws IOException
     {
         FileInputStream fileInputStream = new FileInputStream("./webconfig.properties");
@@ -40,7 +40,7 @@ public class WebBaseClass {
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterTest(groups = {"Web","Smoke","Sanity"})
+    @AfterMethod(groups = {"Web","Smoke","Sanity"})
     public void tearDown()
     {
         webDriver.close();
