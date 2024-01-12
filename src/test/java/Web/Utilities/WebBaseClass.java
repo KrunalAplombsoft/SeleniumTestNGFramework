@@ -17,7 +17,7 @@ public class WebBaseClass {
     @BeforeMethod(groups = {"Web","Smoke","Sanity"})
     public void first() throws IOException
     {
-        FileInputStream fileInputStream = new FileInputStream("./Web_Config/webconfig.properties");
+        FileInputStream fileInputStream = new FileInputStream("./Config_Web/webconfig.properties");
         Properties properties = new Properties();
         properties.load(fileInputStream);
         String browser = properties.getProperty("browser");
