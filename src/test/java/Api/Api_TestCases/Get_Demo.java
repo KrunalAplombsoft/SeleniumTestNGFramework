@@ -1,10 +1,8 @@
-package Api_TestCases;
+package Api.Api_TestCases;
 
-import Utilities.ApiBaseClass;
-import io.restassured.RestAssured;
+import Api.Api_Utilities.ApiBaseClass;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

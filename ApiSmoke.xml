@@ -9,7 +9,7 @@
             </run>
         </groups>
         <classes>
-            <class name="Api_TestCases.Get_Demo"/>
+            <class name="Api.Api_TestCases.Get_Demo"/>
         </classes>
     </test>
 </suite>

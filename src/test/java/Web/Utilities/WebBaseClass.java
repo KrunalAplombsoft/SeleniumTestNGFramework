@@ -1,4 +1,4 @@
-package Utilities;
+package Web.Utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +14,7 @@ public class WebBaseClass {
 
     public static WebDriver webDriver;
 
-    @BeforeTest(groups = {"WebSmoke","WebSanity"})
+    @BeforeTest(groups = {"Web","Smoke","Sanity"})
     public void first() throws IOException
     {
         FileInputStream fileInputStream = new FileInputStream("./webconfig.properties");

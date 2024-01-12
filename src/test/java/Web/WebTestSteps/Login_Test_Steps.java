@@ -1,6 +1,6 @@
-package WebTestSteps;
+package Web.WebTestSteps;
 
-import PageObjects.Login_User_PO;
+import Web.PageObjects.Login_User_PO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;

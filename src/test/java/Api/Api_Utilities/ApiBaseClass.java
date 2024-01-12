@@ -1,4 +1,4 @@
-package Utilities;
+package Api.Api_Utilities;
 
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;

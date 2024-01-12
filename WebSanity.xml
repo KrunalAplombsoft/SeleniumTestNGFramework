@@ -4,12 +4,16 @@
     <test name="Selenium Demo Project">
         <groups>
             <run>
-                <include name="WebSanity"/>
-                <include name="IncorrectEmail"/>
+                <include name="Web"/>
+                <include name="Sanity"/>
+                <exclude name="Smoke"/>
             </run>
         </groups>
-        <classes>
-            <class name="Web_TestCases.Login_Feature"/>
-        </classes>
+        <packages>
+            <package name="Web.Web_TestCases"/>
+        </packages>
+<!--        <classes>-->
+<!--            <class name="Web.Web_TestCases.Login_Feature"/>-->
+<!--        </classes>-->
     </test>
 </suite>
