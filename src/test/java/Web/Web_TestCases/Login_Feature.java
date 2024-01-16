@@ -9,9 +9,9 @@ public class Login_Feature extends WebBaseClass {
 
     @Parameters({"name","surname"})
     @Test(groups = {"Web","Smoke"})
-    public void Login_User_With_Correct_Email_And_Password(String name, String surname)
+    public void Login_User_With_Correct_Email_And_Password(String n1, String s1)
     {
-        System.out.println("Smoke Test " + name + " " + surname);
+        System.out.println("Smoke Test " + n1 + " " + s1);
     }
 
     @Test(groups = {"Web","Sanity"})
