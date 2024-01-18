@@ -5,7 +5,6 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.io.*;
 import java.util.Properties;
 

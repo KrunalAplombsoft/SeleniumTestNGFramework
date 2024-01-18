@@ -12,6 +12,9 @@
           <option value="DemoTestProject" />
           <option value="SeleniumTestNGFramework" />
           <option value="SeleniumTestNGFramework" />
+          <option value="SeleniumTestNGFramework" />
+          <option value="SeleniumTestNGFramework" />
+          <option value="SeleniumTestNGFramework" />
         </list>
       </option>
       <option name="ignoredPackages">
@@ -19,10 +22,16 @@
           <option value="org.webjars:jquery:3.7.1" />
           <option value="org.webjars:jquery:3.7.1" />
           <option value="junit:junit:4.10" />
+          <option value="commons-collections:commons-collections:3.2.2" />
+          <option value="commons-io:commons-io:2.6" />
+          <option value="dom4j:dom4j:1.1" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
