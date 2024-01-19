@@ -7,6 +7,10 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailAttachment;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.MultiPartEmail;
 import org.apache.maven.shared.utils.io.FileUtils;
 import org.codehaus.plexus.util.IOUtil;
 import org.openqa.selenium.OutputType;
@@ -21,11 +25,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Date;
 import java.util.Properties;
-import java.util.SimpleTimeZone;
 import java.util.concurrent.TimeUnit;
 
 public class WebBaseClass {
@@ -89,7 +93,7 @@ public class WebBaseClass {
         File destination = new File(dest);
         FileUtils.copyFile(source, destination);
         System.out.println("destination : " + destination);
-        String path = destination.getAbsolutePath();
+//        String path = destination.getAbsolutePath();
 
         InputStream is = new FileInputStream(dest);
         byte[] ssBytes = IOUtil.toByteArray(is);
@@ -125,8 +129,37 @@ public class WebBaseClass {
     }
 
     @AfterTest(groups = {"Web","Smoke","Sanity"})
-    public void flushReport()
-    {
+    public void flushReport() throws InterruptedException, EmailException {
         reports.flush();
+        Thread.sleep(5000);
+
+        //Create the attachment
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        String date1= dateFormat.format(date);
+        EmailAttachment attachment = new EmailAttachment();
+        attachment.setPath(".\\Report\\ExtentReport.html");
+        attachment.setDisposition(EmailAttachment.ATTACHMENT);
+        attachment.setDescription(date1 + " Test Report");
+        attachment.setName(date1 + " Test Report");
+
+        //Create the email message
+        System.out.println("====================Start Sending====================");
+        MultiPartEmail email = new MultiPartEmail();
+        email.setHostName("smtp.gmail.com");
+        email.setSmtpPort(465);
+        email.setAuthenticator(new DefaultAuthenticator("krunal.parekh@aplombsoft.com", "ljll wqxk utif gqkt"));
+        email.setSSLOnConnect(true);
+        email.addTo("kparekh@tab.com", "Krunal Parekh");
+        email.setFrom("krunal.parekh@aplombsoft.com", "Krunal Tab");
+        email.setSubject(date1 + " Extent Test Report");
+        email.setMsg(date1 + " Extent Test Report");
+
+        //add the attachment
+        email.attach(attachment);
+
+        //send the email
+        email.send();
+        System.out.println("===================Mail Sent Successfully=========================");
     }
 }
