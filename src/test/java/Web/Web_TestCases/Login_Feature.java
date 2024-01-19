@@ -2,6 +2,7 @@ package Web.Web_TestCases;
 
 import Web.Utilities.WebBaseClass;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -15,8 +16,9 @@ public class Login_Feature extends WebBaseClass {
     }
 
     @Test(groups = {"Web","Sanity"})
-    public void Login_User_With_Incorrect_Email_And_Password()
+    public void Incorrect_Email_And_Password()
     {
+        webDriver.findElement(By.id("name")).click();
         System.out.println("Sanity Test");
     }
 }
