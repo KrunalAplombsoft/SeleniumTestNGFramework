@@ -8,8 +8,8 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
-Report
-Screenshots
+#Report
+#Screenshots
 *.iws
 *.iml
 *.ipr
