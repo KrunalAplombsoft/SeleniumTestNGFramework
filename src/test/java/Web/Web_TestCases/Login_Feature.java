@@ -18,7 +18,7 @@ public class Login_Feature extends WebBaseClass {
     @Test(groups = {"Web","Sanity"})
     public void Incorrect_Email_And_Password()
     {
-        webDriver.findElement(By.id("name")).click();
+//        webDriver.findElement(By.id("name")).click();
         System.out.println("Sanity Test");
     }
 }

@@ -39,7 +39,7 @@ public class WebBaseClass {
     ExtentTest test;
     public static WebDriver webDriver;
 
-    @BeforeTest(groups = {"Web","Smoke","Sanity"})
+    @BeforeTest(groups = {"Web","setUp"})
     public void abc (){
         htmlReporter = new ExtentSparkReporter("./Report/ExtentReport.html");
         reports = new ExtentReports();
@@ -56,7 +56,7 @@ public class WebBaseClass {
         htmlReporter.config().setTimeStampFormat("EEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
     }
 
-    @BeforeMethod(groups = {"Web","Smoke","Sanity"})
+    @BeforeMethod(groups = {"Web","setUp"})
     public void first() throws IOException
     {
         FileInputStream fileInputStream = new FileInputStream("./Config_Web/webconfig.properties");
@@ -102,7 +102,7 @@ public class WebBaseClass {
         return base64;
     }
 
-    @AfterMethod(groups = {"Web","Smoke","Sanity"})
+    @AfterMethod(groups = {"Web","setUp"})
     public void tearDown(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.SUCCESS)
         {
@@ -128,7 +128,7 @@ public class WebBaseClass {
         webDriver.close();
     }
 
-    @AfterTest(groups = {"Web","Smoke","Sanity"})
+    @AfterTest(groups = {"Web","setUp"})
     public void flushReport() throws InterruptedException, EmailException {
         reports.flush();
         Thread.sleep(5000);
